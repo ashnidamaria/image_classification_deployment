@@ -10,6 +10,11 @@ app = FastAPI()
 pp = PredictPipe()
 
 
+@app.get('/')
+async def home():
+    return f"Welcome to image classification API"
+
+
 @app.post('/Predict', response_model=PredictApiResponse)
 async def predict(image_url: PredictApiRequest):
     json_dict = image_url.dict()
