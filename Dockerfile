@@ -10,5 +10,5 @@ ADD . /app
 RUN pip install -r requirements.txt
 # Expose port
 ENV PORT 8080
- Run the application:
+# Run the application:
 CMD ["uvicorn", "fresh_app:app", "--host", "0.0.0.0", "--port", "80"]
