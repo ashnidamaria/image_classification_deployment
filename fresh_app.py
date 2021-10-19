@@ -32,4 +32,4 @@ async def predict(image_url: PredictApiRequest):
 
 
 if __name__ == '__main__':
-    uvicorn.run(app, host="0.0.0.0", port=8080)
+    uvicorn.run(app, host="0.0.0.0", port=config.PORT, debug=config.DEBUG_MODE)
